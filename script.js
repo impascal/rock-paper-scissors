@@ -28,58 +28,58 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
 
-    if(humanChoice === "Rock") {
-        if(computerChoice === "Paper") {
+    if (humanChoice === "Rock") {
+        if (computerChoice === "Paper") {
             computerScore++;
             alert("Rock vs Paper! Computer wins!");
-        }else if(computerChoice === "Scissors") {
+        } else if (computerChoice === "Scissors") {
             humanScore++;
             alert("Rock vs Scissors, Player wins!");
-        }else{
+        } else {
             alert("Rock vs Rock, It's a draw!");
         }
     }
 
-    if(humanChoice === "Paper") {
-        if(computerChoice === "Scissors") {
+    if (humanChoice === "Paper") {
+        if (computerChoice === "Scissors") {
             computerScore++;
             alert("Paper vs Scissors! Computer wins!");
-        }else if(computerChoice === "Rock") {
+        } else if (computerChoice === "Rock") {
             humanScore++;
             alert("Paper vs Rock, Player wins!");
-        }else{
+        } else {
             alert("Paper vs Paper, It's a draw!");
         }
     }
 
-    if(humanChoice === "Scissors") {
-        if(computerChoice === "Rock") {
+    if (humanChoice === "Scissors") {
+        if (computerChoice === "Rock") {
             computerScore++;
             alert("Scissors vs Rock! Computer wins!");
-        }else if(computerChoice === "Paper") {
+        } else if (computerChoice === "Paper") {
             humanScore++;
             alert("Scissors vs Paper, Player wins!");
-        }else{
+        } else {
             alert("Scissors vs Scissors, It's a draw!");
         }
     }
 
     alert(`Computer: ${computerScore} ::: Player: ${humanScore}`);
-    
+
 }
 
 function playGame() {
     let endMessage = "";
 
-    for(let i=0; i < ROUNDS; i++) {
+    for (let i = 0; i < ROUNDS; i++) {
         playRound(getHumanChoice(), getComputerChoice());
     }
 
-    if(humanScore > computerScore) {
+    if (humanScore > computerScore) {
         endMessage += "You win: ";
-    }else if(humanScore < computerScore) {
+    } else if (humanScore < computerScore) {
         endMessage += "You lose: ";
-    }else{
+    } else {
         endMessage += "It's a draw: ";
     }
 
